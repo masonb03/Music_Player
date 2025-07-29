@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react'
 import {Routes, Route, Navigate } from 'react-router-dom'
-import Account from '../components/Account';
-import Auth from '../components/Auth';
-import MusicPlayer from '../components/MusicPlayer';
-import Nav from '../components/Nav';
-import Playlist from '../components/Playlist';
-import Search from '../components/Search';
-import Home from '../components/Home';
+import Account from '../components/pages/Account';
+import Auth from '../components/auth/Auth';
+import MusicPlayer from '../components/player/MusicPlayer';
+import Nav from '../components/layout/Nav';
+import Playlist from '../components/pages/Playlist';
+import Search from '../components/pages/Search';
+import Home from '../components/pages/Home';
 
 function App() {
   const [token, setToken] = useState(null);
