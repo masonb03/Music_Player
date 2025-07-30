@@ -1,0 +1,52 @@
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.carousel {
+  display: flex;
+  gap: 1.2rem;
+  overflow: hidden;
+  width: 80vw;
+  max-width: 600px;
+  justify-content: center;
+}
+
+.tile {
+  width: 100px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, background 0.3s ease;
+  box-shadow: var(--glow);
+}
+
+.tile.active {
+  transform: scale(1.2);
+  background-color: var(--accent);
+  color: #17181d;
+}
+
+.emoji {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.scroll-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--soft-accent);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.scroll-btn:hover {
+  color: var(--accent);
+}
