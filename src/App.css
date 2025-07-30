@@ -1,0 +1,75 @@
+/* App.css */
+
+body {
+  background: linear-gradient(to bottom, var(--bg-dark), var(--bg-medium), var(--bg-light));
+  color: var(--text-light);
+}
+
+/* Main layout wrapper */
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Sticky Nav */
+nav {
+  background-color: rgba(20, 25, 35, 0.8);
+  backdrop-filter: blur(8px);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--soft-accent);
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* Main content area */
+main {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Example content block */
+.home-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: var(--glow);
+}
+
+.home-page p {
+  font-size: 1.2rem;
+  color: var(--soft-accent);
+}
+
+/* Optional: Glow effect for special elements */
+.glow {
+  text-shadow: var(--glow);
+}
+
+/* Music player placeholder */
+.music-player {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: rgba(20, 25, 35, 0.9);
+  text-align: center;
+  font-size: 1rem;
+  color: var(--soft-accent);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}

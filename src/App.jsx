@@ -1,3 +1,4 @@
+import './App.css'
 import { useState, useEffect } from 'react'
 import {Routes, Route, Navigate } from 'react-router-dom'
 import Account from '../components/pages/Account';
@@ -7,6 +8,7 @@ import Nav from '../components/layout/Nav';
 import Playlist from '../components/pages/Playlist';
 import Search from '../components/pages/Search';
 import Home from '../components/pages/Home';
+
 
 function App() {
   const [token, setToken] = useState(null);
@@ -21,18 +23,20 @@ function App() {
   }, [token])
 
   return (
-    <>
+    <div className="app-wrapper">
     <Nav token={token}/>
+    <main>
+      <Routes>
+        <Route path='/' element={<Navigate to="/home"/>} />
+        <Route path='/auth' element={<Auth setToken={setToken}/>} />
+        <Route path='/account' element={token ? <Account token ={token} /> : <Navigate to="/auth"/>} />
+        <Route path='/home' element={<Home />} />
+        <Route path='/playlist' element={<Playlist/>} />
+        <Route path='/search' element={<Search />} />
+      </Routes>
+    </main>
     <MusicPlayer/>
-    <Routes>
-      <Route path='/' element={<Navigate to="/home"/>} />
-      <Route path='/auth' element={<Auth setToken={setToken}/>} />
-      <Route path='/account' element={token ? <Account token ={token} /> : <Navigate to="/auth"/>} />
-      <Route path='/home' element={<Home />} />
-      <Route path='/playlist' element={<Playlist/>} />
-      <Route path='/search' element={<Search />} />
-    </Routes>
-    </>
+    </div>
   )
 }
 
