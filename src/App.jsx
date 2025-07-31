@@ -6,7 +6,7 @@ import Auth from '../components/auth/Auth';
 import MusicPlayer from '../components/player/MusicPlayer';
 import Nav from '../components/layout/Nav';
 import Playlist from '../components/pages/Playlist';
-import Search from '../components/pages/Search';
+import Search from '../components/ui/SearchBar';
 import Home from '../components/pages/Home';
 
 
