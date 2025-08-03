@@ -10,11 +10,20 @@ const moods = [
   { name: "Romance", emoji: "❤️" },
 ]
 
-export default function MoodCarousel() {
+export default function MoodCarousel({ onMoodSelect }) {
     const [index, setIndex] = useState(0);
 
-    const next = () => setIndex((prev) => (prev + 1) % moods.length);
-    const prev = () => setIndex((prev) => (prev - 1 + moods.length) % moods.length);
+    const next = () =>{
+        const newIndex = (index + 1) % moods.length;
+        setIndex(newIndex);
+        if(onMoodSelect) onMoodSelect(moods[newIndex].name);
+    };
+
+    const prev = () =>{
+        const newIndex = (index - 1 + moods.length) % moods.length;
+        setIndex(newIndex);
+        if(onMoodSelect) onMoodSelect(moods[newIndex].name);
+    };
 
     return(    
         <div className="carousel-wrapper">

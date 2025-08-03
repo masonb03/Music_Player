@@ -4,13 +4,13 @@ import {Routes, Route, Navigate } from 'react-router-dom'
 import Account from '../components/pages/Account';
 import Auth from '../components/auth/Auth';
 import MusicPlayer from '../components/player/MusicPlayer';
-import Nav from '../components/layout/Nav';
+import Nav from '../components/Layout/Nav';
 import Playlist from '../components/pages/Playlist';
 import Search from '../components/ui/SearchBar';
 import Home from '../components/pages/Home';
 
 
-function App() {
+function App({ currentSong }) {
   const [token, setToken] = useState(null);
 
   useEffect(() =>{
@@ -35,7 +35,7 @@ function App() {
         <Route path='/search' element={<Search />} />
       </Routes>
     </main>
-    <MusicPlayer/>
+    <MusicPlayer track={currentSong}/>
     </div>
   )
 }
