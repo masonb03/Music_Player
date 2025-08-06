@@ -28,7 +28,7 @@ const songs = [
     title: "Cloudwalker",
     artist: "Loft",
     mood: "Chill",
-    url: "/audio/cloudwalker.mp3",
+    url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
     cover: "/images/cloud.jpg"
   },
   {

@@ -9,7 +9,11 @@ function SongList({moodFilter, onSelectSong}) {
     return(
         <div className="song-list">
             {filteredSongs.map((song) => (
-                <div key={song.id} className="song-card" onClick={() => onSelectSong(song)}>
+                <div 
+                key={song.id} 
+                className="song-card" 
+                onClick={() => onSelectSong(song, filteredSongs)}
+                >
                     <img src={song.cover} alt={`${song.title} cover`} />
                     <div>
                         <h4>{song.title}</h4>
